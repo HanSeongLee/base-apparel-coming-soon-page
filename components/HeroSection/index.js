@@ -17,7 +17,7 @@ const HeroSection = () => {
             </picture>
             <div className={styles.content}>
                 <h1 className={styles.title}>
-                    <div>WE'RE</div>
+                    WE'RE <br/>
                     <strong>COMING SOON</strong>
                 </h1>
                 <p className={styles.description}>
