@@ -2,6 +2,7 @@ import React, {useCallback, useState} from 'react';
 import styles from './style.module.scss';
 import ArrowIcon from '/public/icons/icon-arrow.svg';
 import ErrorIcon from '/public/icons/icon-error.svg';
+import cn from 'classnames';
 
 const EmailForm = () => {
     const [error, setError] = useState(false);
@@ -13,7 +14,9 @@ const EmailForm = () => {
 
     return (
         <form className={styles.form}>
-            <input className={styles.input}
+            <input className={cn(styles.input, {
+                [styles.invalid]: error,
+            })}
                    name={'email'}
                    type={'email'}
                    placeholder={'Email Address'}
