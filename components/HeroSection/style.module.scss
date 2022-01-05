@@ -1,0 +1,77 @@
+@import "styles/utils";
+
+.heroSection {
+  @include media(">desktop") {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    background: url("/img/bg-pattern-desktop.svg") no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }
+
+  .heroImage {
+    width: 100%;
+
+    @include media(">desktop") {
+      min-width: 610px;
+      height: 100vh;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 64px 32px 32px;
+
+    @include media(">desktop") {
+      padding: 0;
+      align-items: flex-start;
+      text-align: left;
+      flex: 1;
+      max-width: 445px;
+      margin: auto;
+    }
+
+    .title {
+      max-width: 311px;
+      font-weight: 300;
+      font-size: 40px;
+      line-height: 42px;
+      letter-spacing: 10.8254px;
+      color: #CE9898;
+      margin-bottom: 16px;
+
+      @include media(">desktop") {
+        font-size: 64px;
+        line-height: 64px;
+        margin-bottom: 32px;
+      }
+
+      strong {
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 10.8254px;
+        color: #423A3A;
+      }
+    }
+
+    .description {
+      font-size: 14px;
+      line-height: 22px;
+      color: #CE9898;
+      margin-bottom: 32px;
+
+      @include media(">desktop") {
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

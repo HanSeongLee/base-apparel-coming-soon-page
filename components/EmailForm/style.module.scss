@@ -1,0 +1,97 @@
+@import "styles/utils";
+
+.form {
+  position: relative;
+  width: 100%;
+
+  .input {
+    position: relative;
+    width: inherit;
+    background: transparent;
+    border: 1px solid rgba(206, 152, 152, 0.5);
+    box-sizing: border-box;
+    border-radius: 28px;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 11px 90px 9px 24px;
+    outline: none;
+    color: #423A3A;
+
+    @include media(">desktop") {
+      font-size: 16px;
+      line-height: 28px;
+      padding: 15px 140px 13px 32px;
+    }
+
+    &::placeholder {
+      color: rgba(206, 152, 152, 0.5);
+    }
+
+    &:invalid {
+      border: 2px solid #F96464;
+    }
+  }
+
+  .error {
+    text-align: left;
+    font-size: 13px;
+    line-height: 13px;
+    color: #F96464;
+    margin-top: 8px;
+    padding: 0 24px;
+
+    @include media(">desktop") {
+      font-size: 13px;
+      line-height: 28px;
+      margin-top: 4px;
+    }
+  }
+
+  .errorIcon {
+    position: absolute;
+    top: 13px;
+    right: 64px;
+    margin-right: 8px;
+
+    @include media(">desktop") {
+      top: 17px;
+      right: 100px;
+      margin-right: 16px;
+    }
+  }
+
+  .submitButton {
+    position: absolute;
+    top: 1px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: linear-gradient(135deg, #F8BFBF 0%, #EE8B8B 100%);
+    box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+    border-radius: 28px;
+    width: 64px;
+    height: 48px;
+    cursor: pointer;
+
+    @include media(">desktop") {
+      width: 100px;
+      height: 56px;
+
+      &:hover {
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          content: '';
+          background: rgba(255, 255, 255, 0.5);
+          box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+          border-radius: 28px;
+        }
+      }
+    }
+  }
+}
